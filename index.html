@@ -1,0 +1,102 @@
+<head>
+    <link rel='stylesheet' href="css.css"/>
+    <script src="1.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Задачи</title>
+    <meta charset='utf-8'>
+</head>
+<body><center>
+    <div class='adder'>
+        <div class='task1'>
+            <br>
+            <p>Поезд ехал 23 минуты со скоростью 30м/c.<br>
+            Найдите расстояние пройденного пути.<br>
+            Запишите ответ в метрах.</p>
+            <b>Ответ: <input type=text id='t1'></b>
+            <button onclick=fCheck1()>Проверить</button>
+
+
+            <hr>
+
+            <p id='out'>Результат</p>
+
+            <hr>
+</div>
+
+        <br>
+
+        </div>
+
+        <button class='add_task'>Next</button>
+
+    <div class='container'>
+        <div class='task2'>
+        <p>Влад прошел 2.3 км за 24 минуты.<br>
+        С какой скоростью он шёл? <br>
+        Запишите ответ в км/ч.</p>
+        <b>Ответ: <input type=text id='t2'> </b>
+        <button onclick=fCheck2()>Проверить</button>
+
+
+        <hr>
+    
+        <p id='out1'>Результат</p>
+
+        <hr>
+        </div>
+    
+        <br>
+
+        <div class='task3'>
+        <p>Автомобиль выехал на трассу со скоростью 90км/ч. За сколько<br>
+        автомобиль проедет 430 000м?<br>
+        Запишите ответ в часах и округлите до сотых.</p>
+        <b>Ответ: <input type=text id='t3'> </b>
+        <button onclick=fCheck3()>Проверить</button>
+
+        <hr>
+    
+        <p id='out2'>Результат</p>
+    
+        <hr>
+    
+    </div>
+
+        <br>
+
+        <div id='task4'>
+        <p>Легкоатлет в течении 6 минут бежит 38км/ч.<br>
+        Следующие 15 минут, он бежит 32км/ч.<br>
+        Найдите расстояние, которое он пробежал.<br>
+        Запишите ответ в километрах.</p>
+        <b>Ответ: <input type=text id='t4'> </b>
+        <button onclick=fCheck4()>Проверить</button>
+
+        <hr>
+    
+        <p id='out3'>Результат</p>
+    
+        <hr>
+    </div>
+    </div>
+    <script>
+        $( ".container" ).remove();
+    </script>
+    <script>
+    $( '.add_task' ).click(function() {
+        $( ".add_task" ).remove();
+        $( ".task1" ).remove();
+        $(" .adder ").append( "<div class='task2'><p>Влад прошел 2.3 км за 24 минуты.<br> С какой скоростью он шёл? <br> Запишите ответ в км/ч.</p><b>Ответ: <input type=text id='t2'> </b><button onclick=fCheck2()>Проверить</button><hr><p id='out1'>Результат</p><hr><br></div><button class='add_task2'>Next</button>" );
+        $(' .add_task2 ').click( function() {
+            $( '.add_task2' ).remove();
+            $( '.task2' ).remove();
+            $( '.adder' ).append("<div class='task3'><p>Автомобиль выехал на трассу со скоростью 90км/ч. За сколько<br>автомобиль проедет 430 000м?<br>Запишите ответ в часах и округлите до сотых.</p><b>Ответ: <input type=text id='t3'></b><button onclick=fCheck3()>Проверить</button><hr><p id='out2'>Результат</p><hr><br></div><button class='add_task3'>Next</button>");
+            $( '.add_task3' ).click(function() {
+                $( '.add_task3' ).remove();
+                $( '.task3' ).remove();
+                $( '.adder' ).append( "<div id='task4'><p>Легкоатлет в течении 6 минут бежит 38км/ч.<br>Следующие 15 минут, он бежит 32км/ч.<br>Найдите расстояние, которое он пробежал. Запишите ответ в километрах.</p><b>Ответ: <input type=text id='t4'> </b><button onclick=fCheck4()>Проверить</button><hr><p id='out3'>Результат</p><hr></div>" )
+            })
+        })
+    });
+    </script>
+   </center></body>
